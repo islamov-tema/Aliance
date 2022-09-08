@@ -277,6 +277,39 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  flex-basis: 33%;
+  border: 1px solid #ebebf0;
+  position: relative;
+}
+.card-content {
+  padding: 2.5rem 3.125rem;
+}
+.card-title {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 140%;
+  color: #292d33;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+}
+.card-text {
+  font-size: 1rem;
+  line-height: 160%;
+  color: #828a99;
+  margin-bottom: 24.625rem;
+}
+.card-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 90%;
+}
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
@@ -324,6 +357,9 @@ body {
   }
   .steps-buttons {
     display: flex;
+  }
+  .card {
+    flex-basis: 50%;
   }
 }
 @media (max-width: 992px) {
@@ -458,6 +494,9 @@ body {
   }
   .header-content {
     padding-top: 3rem;
+  }
+  .card {
+    flex-basis: 100%;
   }
 }
 @media (max-width: 576px) {
