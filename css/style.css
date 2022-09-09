@@ -400,6 +400,7 @@ body {
   color: #5c8ee6;
 }
 .founder {
+  min-height: 41.25rem;
   position: relative;
 }
 .founder-photo {
@@ -407,7 +408,7 @@ body {
   left: 0;
   width: 40%;
   top: 0;
-  min-height: 41.25rem;
+  height: 100%;
   object-fit: cover;
 }
 .founder-content {
@@ -422,6 +423,45 @@ body {
   font-size: 1rem;
   line-height: 160%;
   color: #828a99;
+}
+.clients-wrapper {
+  display: flex;
+  gap: 3.125rem;
+}
+.clients-content {
+  flex-basis: 50%;
+}
+.clients-list {
+  list-style-type: none;
+  padding: 0;
+  columns: 2 auto;
+}
+.clients-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #292d33;
+}
+.clients-logo-list {
+  flex-shrink: 10;
+  display: flex;
+  flex-wrap: wrap;
+}
+.clinets-logo-item {
+  flex-basis: 33%;
+  border: 1px solid #ebebf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.clients-logo {
+  max-width: 100%;
+  width: 70px;
+  height: 70px;
 }
 @media (max-width: 1700px) {
   html {
@@ -479,6 +519,9 @@ body {
   }
   .founder-content {
     max-width: 35rem;
+  }
+  .clients-content {
+    flex-basis: 60%;
   }
 }
 @media (max-width: 992px) {
@@ -606,6 +649,9 @@ body {
   .trademark-cards {
     flex-direction: column;
   }
+  .clients-wrapper {
+    flex-direction: column;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -640,5 +686,11 @@ body {
     grid-template-areas:
       "logo title"
       "text text";
+  }
+  .clients-list {
+    columns: 1;
+  }
+  .clinets-logo-item {
+    flex-basis: 50%;
   }
 }
