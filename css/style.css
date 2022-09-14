@@ -488,6 +488,11 @@ body {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+.clinets-logo-item:hover {
+  filter: grayscale(0%);
 }
 .clients-logo {
   max-width: 100%;
