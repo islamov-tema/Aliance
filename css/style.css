@@ -301,9 +301,6 @@ body {
   margin-right: 1.2rem;
   transition: width 0.2s;
 }
-.button-link:hover:before {
-  width: 60px;
-}
 
 .primary-buttons-wrapper {
   display: flex;
@@ -338,12 +335,7 @@ body {
   position: relative;
   transition: border 0.2s;
 }
-.card:hover .card-title {
-  color: #5c8ee6;
-}
-.card:hover {
-  border-color: #5c8ee6;
-}
+
 .card-content {
   padding: 2.5rem 3.125rem;
   padding-bottom: 23.6rem;
@@ -394,7 +386,7 @@ body {
 }
 .trademark-card-logo {
   width: 100%;
-  height: 100%;
+  height: auto;
   fill: #828a99;
   grid-area: logo;
 }
@@ -415,15 +407,7 @@ body {
   grid-area: text;
   margin-top: 0.625rem;
 }
-.trademark-card:hover {
-  border-color: #5c8ee6;
-}
-.trademark-card:hover .trademark-card-logo {
-  fill: #5c8ee6;
-}
-.trademark-card:hover .trademark-card-title {
-  color: #5c8ee6;
-}
+
 .founder {
   min-height: 41.25rem;
   position: relative;
@@ -496,9 +480,7 @@ body {
   filter: grayscale(100%);
   transition: filter 0.2s;
 }
-.clinets-logo-item:hover {
-  filter: grayscale(0%);
-}
+
 .clients-logo {
   max-width: 100%;
   width: 70px;
@@ -655,6 +637,32 @@ body {
   color: #828a99;
   margin: 0;
 }
+
+/* hover effects */
+@media (hover: hover) {
+  .button-link:hover:before {
+    width: 60px;
+  }
+  .card:hover .card-title {
+    color: #5c8ee6;
+  }
+  .card:hover {
+    border-color: #5c8ee6;
+  }
+  .trademark-card:hover {
+    border-color: #5c8ee6;
+  }
+  .trademark-card:hover .trademark-card-logo {
+    fill: #5c8ee6;
+  }
+  .trademark-card:hover .trademark-card-title {
+    color: #5c8ee6;
+  }
+  .clinets-logo-item:hover {
+    filter: grayscale(0%);
+  }
+}
+
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
