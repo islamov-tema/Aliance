@@ -176,6 +176,78 @@ body {
   z-index: 1;
   color: #fff;
 }
+.page-header {
+  padding-top: 9.375rem;
+  padding-bottom: 3.125rem;
+  color: #292d33;
+  position: relative;
+}
+.page-header-thumb {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  max-width: 30rem;
+}
+.page-header-bg-image {
+  background-image: url("../img/blog/blog-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+}
+
+.page-header-bg-image:before {
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 45, 51, 0.6);
+}
+.page-header-bg-image .container {
+  position: relative;
+}
+.page-header-bg-grey {
+  background: #f0f2f5;
+}
+.page-header-title {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 120%;
+  color: inherit;
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 10px;
+}
+.breadcrumbs-link {
+  text-decoration: none;
+  color: inherit;
+}
+.breadcrumbs-link {
+  color: #828a99;
+}
+.breadcrumbs-item.active .breadcrumbs-link {
+  color: #292d33;
+}
+.breadcrumbs-item:not(:last-child)::after {
+  content: "—";
+  margin-left: 10px;
+}
+.page-header-bg-image .breadcrumbs-link,
+.breadcrumbs-item.active .breadcrumbs-link {
+  color: #fff;
+}
 .header-title {
   max-width: 67.5rem;
   font-family: "Bebas Neue";
