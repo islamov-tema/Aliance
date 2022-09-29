@@ -102,19 +102,23 @@ const swiperBlog = new Swiper(".blog-slider", {
   },
 });
 
-const modal = document.querySelector(".modal");
-const modalDialog = document.querySelector(".modal-dialog");
+let modal;
+let modalDialog;
+let thanksModal = document.querySelector("#thanks-modal");
+const modalButton = document.querySelectorAll("[data-toggle=modal]");
 
-document.addEventListener("click", (event) => {
-  if (
-    event.target.dataset.toggle == "modal" ||
-    event.target.parentNode.dataset.toggle == "modal" ||
-    (!event.composedPath().includes(modalDialog) &&
-      modal.classList.contains("is-open"))
-  ) {
+modalButton.forEach((button) => {
+  button.addEventListener("click", (event) => {
     event.preventDefault();
+    modal = document.querySelector(button.dataset.target);
+    modalDialog = modal.childNodes[1];
     modal.classList.toggle("is-open");
-  }
+    modal.addEventListener("click", (event) => {
+      if (!event.composedPath().includes(modalDialog)) {
+        modal.classList.remove("is-open");
+      }
+    });
+  });
 });
 document.addEventListener("keyup", (event) => {
   if (event.key == "Escape" && modal.classList.contains("is-open")) {
@@ -155,7 +159,7 @@ forms.forEach((form) => {
         }).then((response) => {
           if (response.ok) {
             thisForm.reset();
-            alert("Форма отправлена! 👌");
+            thanksModal.classList.toggle("is-open");
           } else {
             alert("Ошибка. Текст ошибки: ".response.statusText);
           }
