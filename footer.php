@@ -2,7 +2,7 @@
       <div class="bg-grey section-cta">
         <img src="img/cta.png" alt="call to action" class="cta-image" />
         <div class="cta-from-wrapper container">
-          <form action="handsdfsdfler.php" method="POST" class="cta-form">
+          <form action="handler.php" method="POST" class="cta-form">
             <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
             <p class="cta-form-text">
               Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время
@@ -28,7 +28,7 @@
                   id="user-phone"
                   type="tel"
                   name="userphone"
-                  class="input"
+                  class="input phone-mask"
                   placeholder=" "
                   maxlength="30"
                   required
@@ -222,7 +222,7 @@
               <input
                 id="modal-user-phone"
                 type="tel"
-                class="input modal-input"
+                class="input modal-input phone-mask"
                 name="userphone"
                 placeholder=" "
               />

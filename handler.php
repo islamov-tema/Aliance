@@ -1,7 +1,4 @@
 <?php 
-ini_set('display_errors',1);
-error_reporting(E_ALL);
-
 $user_name = htmlspecialchars($_POST["username"]);
 $user_phone = htmlspecialchars($_POST['userphone']);
 
