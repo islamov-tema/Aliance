@@ -245,7 +245,7 @@ body {
   margin-left: 10px;
 }
 .page-header-bg-image .breadcrumbs-link,
-.breadcrumbs-item.active .breadcrumbs-link {
+.page-header-bg-image .breadcrumbs-item.active .breadcrumbs-link {
   color: #fff;
 }
 .header-title {
