@@ -102,27 +102,37 @@ const swiperBlog = new Swiper(".blog-slider", {
   },
 });
 
-let modal;
-let modalDialog;
-let thanksModal = document.querySelector("#thanks-modal");
-const modalButton = document.querySelectorAll("[data-toggle=modal]");
+let currentModal; // текущее модальное окно
+let modalDialog; // белое диалоговое окно
+let alertModal = document.querySelector("#alert-modal"); // окно с предупреждением
 
-modalButton.forEach((button) => {
+const modalButtons = document.querySelectorAll("[data-toggle=modal]"); // переключатели модальных окон
+modalButtons.forEach((button) => {
+  /* клик по переключателю */
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    modal = document.querySelector(button.dataset.target);
-    modalDialog = modal.childNodes[1];
-    modal.classList.toggle("is-open");
-    modal.addEventListener("click", (event) => {
+    /* определяем текущее открытое окно */
+    currentModal = document.querySelector(button.dataset.target);
+    /* открываем текущее окно */
+    currentModal.classList.toggle("is-open");
+    /* назначаем диалоговое окно  */
+    modalDialog = currentModal.querySelector(".modal-dialog");
+    /* отслеживаем клик по окну и пустым областям */
+    currentModal.addEventListener("click", (event) => {
+      /* если клик в пустую область (не диалог) */
       if (!event.composedPath().includes(modalDialog)) {
-        modal.classList.remove("is-open");
+        /* закрываем окно */
+        currentModal.classList.remove("is-open");
       }
     });
   });
 });
+/* ловим событие нажатия на кнопки */
 document.addEventListener("keyup", (event) => {
-  if (event.key == "Escape" && modal.classList.contains("is-open")) {
-    modal.classList.toggle("is-open");
+  /* проверяем, что это Escape и текущее окно открыто */
+  if (event.key == "Escape" && currentModal.classList.contains("is-open")) {
+    /* закрываем текущее окно */
+    currentModal.classList.toggle("is-open");
   }
 });
 
@@ -159,7 +169,15 @@ forms.forEach((form) => {
         }).then((response) => {
           if (response.ok) {
             thisForm.reset();
-            thanksModal.classList.toggle("is-open");
+            currentModal.classList.remove("is-open");
+            alertModal.classList.add("is-open");
+            currentModal = alertModal;
+            modalDialog = currentModal.querySelector(".modal-dialog");
+            currentModal.addEventListener("click", (event) => {
+              if (!event.composedPath().includes(modalDialog)) {
+                currentModal.classList.remove("is-open");
+              }
+            });
           } else {
             alert("Ошибка. Текст ошибки: ".response.statusText);
           }

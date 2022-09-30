@@ -128,7 +128,7 @@
             будущего проекта напрямую зависит от анализа существующих паттернов
             поведения.
           </p>
-          <button class="button header-button" data-toggle="modal" data-target="#thanks-modal">
+          <button class="button header-button" data-toggle="modal" data-target="#feedback-modal">
             Подробнее о компании
           </button>
         </div>
