@@ -227,11 +227,11 @@
               </p>
             </a>
             <a href="#" class="swiper-slide blog-card">
-              
               <picture>
                 <source type="image/webp" srcset="img/blog/blog-post.webp">
                 <source type="image/jpeg" srcset="img/blog/blog-post.jpeg">
                 <img src="img/blog/blog-post.jpeg" alt="" class="blog-card-image" />
+              </picture>
               <h3 class="blog-card-title">
                 Сложно сказать, почему жизнь прекрасна </h3>
               <p class="blog-card-text">
