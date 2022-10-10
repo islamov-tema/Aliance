@@ -16,11 +16,11 @@
           </p>
         </div>
         <!-- /.card-content -->
-        <img
-          src="img/avto-him.png"
-          alt="Автомобильная химия"
-          class="card-image"
-        />
+        <picture>
+          <source type="image/webp" srcset="img/avto-him.webp"> 
+          <source type="image/jpeg" srcset="img/avto-him.jpg"> 
+          <img src="img/avto-him.png" alt="Автомобильная химия" class="card-image" />
+        </picture>
       </a>
       <a href="#" class="card">
         <div class="card-content">
@@ -31,11 +31,11 @@
           </p>
         </div>
         <!-- /.card-content -->
-        <img
-          src="img/household.png"
-          alt="Бытовая химия"
-          class="card-image"
-        />
+        <picture>
+          <source type="image/webp" srcset="img/household.webp"> 
+          <source type="image/jpeg" srcset="img/household.jpg"> 
+          <img src="img/household.png" alt="Бытовая химия" class="card-image" />
+        </picture>
       </a>
       <a href="#" class="card">
         <div class="card-content">
@@ -45,11 +45,11 @@
           </p>
         </div>
         <!-- /.card-content -->
-        <img
-          src="img/desinfection.png"
-          alt="Дезинфицирующие средства"
-          class="card-image"
-        />
+        <picture>
+          <source type="image/webp" srcset="img/desinfection.webp"> 
+          <source type="image/jpeg" srcset="img/desinfection.jpg"> 
+          <img src="img/desinfection.png" alt="Дезинфицирующие средства" class="card-image" />
+        </picture>
       </a>
       <a href="#" class="card">
         <div class="card-content">
@@ -60,7 +60,11 @@
           </p>
         </div>
         <!-- /.card-content -->
-        <img src="img/food.png" alt="Пищевые аэрозоли" class="card-image" />
+        <picture>
+          <source type="image/webp" srcset="img/food.webp"> 
+          <source type="image/jpeg" srcset="img/food.jpg"> 
+          <img src="img/food.png" alt="Пищевые аэрозоли" class="card-image" />
+        </picture>
       </a>
       <a href="#" class="card">
         <div class="card-content">
@@ -70,11 +74,11 @@
           </p>
         </div>
         <!-- /.card-content -->
-        <img
-          src="img/him.png"
-          alt="Косметическая продукция"
-          class="card-image"
-        />
+        <picture>
+          <source type="image/webp" srcset="img/him.webp"> 
+          <source type="image/jpeg" srcset="img/him.jpg"> 
+          <img src="img/him.png" alt="Косметическая продукция" class="card-image" />
+        </picture>
       </a>
       <a href="#" class="card">
         <div class="card-content">
@@ -85,11 +89,11 @@
           </p>
         </div>
         <!-- /.card-content -->
-        <img
-          src="img/colors.png"
-          alt="Краски аэрозольные"
-          class="card-image"
-        />
+        <picture>
+          <source type="image/webp" srcset="img/colors.webp"> 
+          <source type="image/jpeg" srcset="img/colors.jpg"> 
+          <img src="img/colors.png" alt="Краски аэрозольные" class="card-image" />
+        </picture>
       </a>
     </div>
     <!-- /.cards -->
